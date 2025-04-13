@@ -1,0 +1,83 @@
+[
+  {
+    "id": "1",
+    "title": "Basketball Betting App",
+    "previewImage": "/basketball_preview.jpg",
+    "detailedImage": "/basketball_detailed.jpg",
+    "detailedDescription": "This app uses Django, React, and PostgreSQL to build a robust basketball app. This app provides analysis of team and player statistics as well as leverages machie learning to provide insight on potential stats. This app uses JWT Tokens to ensure secure user authentication.",
+    "link": "https://github.com/avillann00/basketball_stats",
+    "isPdf": false
+  },
+  {
+    "id": "2",
+    "title": "Finance App",
+    "previewImage": "/money_preview.jpg",
+    "detailedImage": "/finance_detailed.jpg",
+    "detailedDescription": "This app is built using Flask to make a personal finance tracking webiste. This app allows users to input their monthly spending and expenses so that it can easily be viewed using dynamic graphs.",
+    "link": "https://github.com/avillann00/finance_app",
+    "isPdf": false
+  },
+  {
+    "id": "3",
+    "title": "Car Price Predictor",
+    "previewImage": "/car_preview.jpg",
+    "detailedImage": "/car_detailed.jpg",
+    "detailedDescription": "This app is engineered using Django and uses Scikit-Learn's gradient boosting model to accurately predict the price of a car based on various factors. This app uses data collected from kaggle and an integrated API to provide accurate pricing data to the user. This app also integrates OAuth for a secure user sign in experience.",
+    "link": "https://github.com/avillann00/car_predictor",
+    "isPdf": false
+  },
+  {
+    "id": "4",
+    "title": "Fragrance Price Tracker",
+    "previewImage": "/fragrance_preview.jpg",
+    "detailedImage": "/fragrance_detailed.jpg",
+    "detailedDescription": "This is a full stack application that uses Django, React, and PostgreSQL that allows users to track the price of a given fragrance across various websites. This application is enabled to perform CRUD actions so that users can compare the price of various fragrances to get the best deal. This application also makes use of JWT Tokens to ensure user security across all pages.",
+    "link": "https://github.com/avillann00/fragrance_tracking",
+    "isPdf": false
+  },
+  {
+    "id": "5",
+    "title": "Stock Analysis App",
+    "previewImage": "/stock_preview.jpg",
+    "detailedImage": "/stock_detailed.jpg",
+    "detailedDescription": "This app is built using Django and collects data from the yfinance api. The data collected from the api is stored and processed using pandas before it is visualized using matplotlib. The app collects information for stocks in the s&p500 and calculates various metrics to give better insight on those stocks.",
+    "link": "https://github.com/avillann00/stock_analyzing",
+    "isPdf": false
+  },
+  {
+    "id": "6",
+    "title": "Java Bank Simulator",
+    "previewImage": "/bank_preview.jpg",
+    "detailedImage": "/bank_detailed.jpg",
+    "detailedDescription": "This program is built using Java to make use of object oriented programming design concepts. There are 3 different classes that work with eachother so that the user can perform basic actions as if they were at a bank. Those actions include registering an account and other actions such as deposit and withdraw.",
+    "link": "https://github.com/avillann00/bank_simulator",
+    "isPdf": false
+  },
+  {
+    "id": "7",
+    "title": "Job Materials",
+    "previewImage": "",
+    "detailedImage": "/ENC Cover Letter.pdf",
+    "detailedDescription": "",
+    "link": "https://github.com/avillann00/enc_cover_letter",
+    "isPdf": true
+  },
+  {
+    "id": "8",
+    "title": "Instructions",
+    "previewImage": "",
+    "detailedImage": "/ENC Instructions.pdf",
+    "detailedDescription": "",
+    "link": "https://github.com/avillann00/enc_instructions",
+    "isPdf": true
+  },
+  {
+    "id": "9",
+    "title": "Research Proposal",
+    "previewImage": "",
+    "detailedImage": "/Project 3 Proposal.pdf",
+    "detailedDescription": "",
+    "link": "https://github.com/avillann00/enc_proposal",
+    "isPdf": true
+  }
+]
