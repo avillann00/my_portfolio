@@ -7,78 +7,92 @@ import ProjectCard from './components/ProjectCard';
 export default function Landing() {
   const router = useRouter();
 
-  interface Project{
-    id: string
-    title: string
-    previewImage: string
-    detailedImage: string
-    detailedDescription: string
-    link: string
-    isPdf: boolean
+  interface Project {
+    id: string;
+    title: string;
+    previewImage: string;
+    detailedImage: string;
+    detailedDescription: string;
+    link: string;
+    isPdf: boolean;
   }
 
-  const cards = projects.map((project: Project) => (
-    <div key={project.id} className="col-sm-12 col-md-6 col-lg-4 mb-4 d-flex">
-      <ProjectCard
-        id={project.id}
-        title={project.title}
-        previewImage={project.previewImage}
-        detailedImage={project.detailedImage}
-        detailedDescription={project.detailedDescription}
-        link={project.link}
-        isPdf={project.isPdf}
-      />
+  const cards = projects.slice(0, 6).map((project: Project) => (
+    <div key={project.id} className="w-full sm:w-1/2 lg:w-1/3 p-4">
+      <ProjectCard {...project} />
     </div>
   ));
 
   return (
-    <div className="container py-5 landing-background">
-      {/* Header Section */}
-      <div className="text-center mb-5">
-        <h1 className="fw-bold text-primary display-3">Austin Villanueva's Portfolio</h1>
-        <div className="d-flex justify-content-center gap-3 mt-3">
-          <button className="btn btn-primary px-4 py-2" onClick={() => router.push('/resume')}>
+    <div className="min-h-screen bg-gray-50 text-gray-800 px-4 sm:px-8 py-8">
+      {/* Header */}
+      <header className="text-center mb-10">
+        <h1 className="text-4xl font-bold mb-4">Austin Villanueva&apos;s Portfolio</h1>
+        <div className="space-x-4">
+          <button
+            onClick={() => router.push('/resume')}
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          >
             View Resume
           </button>
-          <button className="btn btn-outline-secondary px-4 py-2" onClick={() => router.push('/about')}>
+          <button
+            onClick={() => router.push('/about')}
+            className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
+          >
             About Me
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* Intro Section */}
-      <div className="text-center mb-5">
-        <p className="lead text-muted">
-          I'm a second-year Computer Science major at the University of Central Florida.
-          I'm passionate about full stack development and machine learning.
-          In my free time, I enjoy watching sports, working on personal coding projects, and collecting fragrances.
+      {/* Intro */}
+      <section className="max-w-3xl mx-auto text-center mb-12">
+        <p className="text-lg leading-relaxed">
+          I&apos;m a second-year Computer Science major at the University of Central Florida.
+          I&apos;m passionate about full stack development and machine learning. In my free time,
+          I enjoy watching sports, working on personal coding projects, and collecting fragrances.
         </p>
-      </div>
+      </section>
 
-      {/* Projects Section */}
-      <h3 className="mb-4 text-center text-primary">Projects</h3>
-      <div className="row d-flex justify-content-center gx-4 gy-4">
-        {cards}
-      </div>
+      {/* Projects */}
+      <section className="mb-16">
+        <h3 className="text-2xl font-semibold text-center mb-8">Projects</h3>
+        <div className="flex flex-wrap justify-center">
+          {cards}
+        </div>
+      </section>
 
-      {/* Contact Section */}
-      <div className="text-center mb-4 py-5">
-        <h3 className="text-primary">Contact</h3>
-        <div className="d-flex justify-content-center gap-5">
-          <div className="card p-3" style={{ maxWidth: "200px" }}>
-            <h5>Email</h5>
-            <p className="mb-0">au563482@ucf.edu</p>
+      {/* Contact */}
+      <section className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
+        <h3 className="text-2xl font-semibold mb-6 text-center">Contact</h3>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center text-center">
+          <div>
+            <h5 className="text-lg font-medium">Email</h5>
+            <p className="text-gray-600">au563482@ucf.edu</p>
           </div>
-          <div className="card p-3" style={{ maxWidth: "200px" }}>
-            <h5>GitHub</h5>
-            <a href="https://github.com/avillann00" className="btn btn-outline-primary w-100">GitHub Profile</a>
+          <div>
+            <h5 className="text-lg font-medium">GitHub</h5>
+            <a
+              href="https://github.com/avillann00"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              GitHub Profile
+            </a>
           </div>
-          <div className="card p-3" style={{ maxWidth: "200px" }}>
-            <h5>LinkedIn</h5>
-            <a href="https://www.linkedin.com/in/austin-villanueva-56abbb2b2" className="btn btn-outline-primary w-100">LinkedIn Profile</a>
+          <div>
+            <h5 className="text-lg font-medium">LinkedIn</h5>
+            <a
+              href="https://www.linkedin.com/in/austin-villanueva-56abbb2b2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              LinkedIn Profile
+            </a>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

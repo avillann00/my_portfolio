@@ -6,34 +6,26 @@ export default function Resume() {
   const router = useRouter();
 
   return (
-    <div className="container py-5">
-      <h1 className="mb-4 text-center">My Resume</h1>
+    <div className="min-h-screen bg-gray-100 px-4 py-10 flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">My Resume</h1>
 
-      {/* Embed the Resume PDF with a styled iframe */}
-      <div className="row justify-content-center">
-        <div className="col-12 col-md-8">
-          <div className="card shadow-sm mb-4">
-            <div className="card-body">
-              <iframe 
-                className="resume w-100" 
-                title="Resume" 
-                src="/resume.pdf" 
-                style={{ height: '80vh', border: 'none' }} 
-              />
-            </div>
-          </div>
-        </div>
+      {/* Embedded Resume PDF */}
+      <div className="w-full max-w-4xl rounded-lg overflow-hidden shadow-lg bg-white border mb-8">
+        <iframe 
+          title="Resume"
+          src="/resume.pdf"
+          className="w-full h-[80vh]"
+          style={{ border: 'none' }}
+        />
       </div>
 
       {/* Go back button */}
-      <div className="text-center mt-4">
-        <button 
-          className="btn btn-primary" 
-          onClick={() => router.push('/')}
-        >
-          Go Back
-        </button>
-      </div>
+      <button 
+        onClick={() => router.back()}
+        className="px-6 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+      >
+        Go Back
+      </button>
     </div>
   );
 }
