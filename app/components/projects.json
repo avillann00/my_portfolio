@@ -29,27 +29,27 @@
   {
     "id": "7",
     "title": "Job Materials",
-    "previewImage": "",
+    "previewImage": "job_materials_preview.jpg",
     "detailedImage": "/ENC Cover Letter.pdf",
-    "detailedDescription": "",
+    "detailedDescription": "For this project from my technical writing class, I was tasked with creating a resume and cover letter for a job listing of my choice. I choose a job listing from the company CareYaya which I found on Handshake. The goal of this project is to showcase my technical writing skills to a recruiter in a way that shows how I believe to be the best candidate for this position. To see my resume click the menu icon and select View Resume",
     "link": "https://github.com/avillann00/enc_cover_letter",
     "isPdf": true
   },
   {
     "id": "8",
     "title": "Instructions",
-    "previewImage": "",
+    "previewImage": "instructions_preview.jpg",
     "detailedImage": "/ENC Instructions.pdf",
-    "detailedDescription": "",
+    "detailedDescription": "For this project from my technical writing class, I was tasked with creating a set of instructions about a topic of my choice. I choose to create instructions on how to use GitHub for new Computer Science students. I used a variety of photos and many different sub headings to create a well diversified set of instructions that provides most of the essential actions that you need to know as a new Computer Science student.",
     "link": "https://github.com/avillann00/enc_instructions",
     "isPdf": true
   },
   {
     "id": "9",
     "title": "Research Proposal",
-    "previewImage": "",
+    "previewImage": "research_proposal_preview.jpg",
     "detailedImage": "/Project 3 Proposal.pdf",
-    "detailedDescription": "",
+    "detailedDescription": "For this project from my technical writing class, I was tasked with working with a group to make a research proposal to UCF's research department. We came up with the idea of creating machine learning software to predict the number of possible flu cases on a college campus so that the campus can better handle seasonal outbreaks. We worked together to create a strong proposal that effectively stages our issue and outlines how we are going to solve the issue.",
     "link": "https://github.com/avillann00/enc_proposal",
     "isPdf": true
   },

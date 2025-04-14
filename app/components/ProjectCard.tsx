@@ -31,7 +31,7 @@ export default function ProjectCard({
             detailedImage
           )}&detailedDescription=${encodeURIComponent(
             detailedDescription
-          )}&link=${encodeURIComponent(link)}&isPdf=${isPdf}`
+          )}&link=${encodeURIComponent(link)}&isPdf=${String(isPdf)}`
         )
       }
       className="w-full bg-white rounded-xl shadow-md overflow-hidden transition transform hover:scale-[1.02] hover:shadow-lg focus:outline-none"
@@ -41,7 +41,7 @@ export default function ProjectCard({
           <img
             src={previewImage}
             alt={`Preview of ${title}`}
-            className="h-48 w-full object-cover"
+            className="h-48 w-full object-contain"
           />
         )}
         <div className="p-4 text-left">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams, useRouter } from 'next/navigation';
+import Menu from '@/app/components/Menu';
 
 export default function ProjectDetails() {
   const router = useRouter();
@@ -15,7 +16,8 @@ export default function ProjectDetails() {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-6">
-        <h1 className="text-3xl font-bold text-gray-800 text-center">{title}</h1>
+        <Menu />
+        <h1 className="text-3xl font-bold text-gray-800 text-center">Austin&apos;s {title} Project</h1>
 
         <div className="w-full flex justify-center">
           {isPdf ? (

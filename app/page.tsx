@@ -1,11 +1,11 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
 import projects from './components/projects.json';
 import ProjectCard from './components/ProjectCard';
+import Menu from './components/Menu';
 
 export default function Landing() {
-  const router = useRouter();
+
 
   interface Project {
     id: string;
@@ -26,30 +26,17 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 px-4 sm:px-8 py-8">
       {/* Header */}
-      <header className="text-center mb-10">
+      <header className="text-center mb-10 flex flex-col items-center">
+        <Menu />
         <h1 className="text-4xl font-bold mb-4">Austin Villanueva&apos;s Portfolio</h1>
-        <div className="space-x-4">
-          <button
-            onClick={() => router.push('/resume')}
-            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-          >
-            View Resume
-          </button>
-          <button
-            onClick={() => router.push('/about')}
-            className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition"
-          >
-            About Me
-          </button>
-        </div>
       </header>
 
       {/* Intro */}
       <section className="max-w-3xl mx-auto text-center mb-12">
         <p className="text-lg leading-relaxed">
           I&apos;m a second-year Computer Science major at the University of Central Florida.
-          I&apos;m passionate about full stack development and machine learning. In my free time,
-          I enjoy watching sports, working on personal coding projects, and collecting fragrances.
+          I&apos;m passionate about full stack development and machine learning. I am currently
+          a Software Development Intern at Playtoon and a Stocker/Forklift Driver at Costco Wholesale.
         </p>
       </section>
 

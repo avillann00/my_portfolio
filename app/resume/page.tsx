@@ -1,13 +1,15 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
+import Menu from '../components/Menu';
 
 export default function Resume() {
   const router = useRouter();
 
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-10 flex flex-col items-center">
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">My Resume</h1>
+      <Menu />
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">Austin&apos;s Resume</h1>
 
       {/* Embedded Resume PDF */}
       <div className="w-full max-w-4xl rounded-lg overflow-hidden shadow-lg bg-white border mb-8">
