@@ -14,10 +14,10 @@ export default function ProjectDetails() {
   const isPdf = searchParams.get("isPdf") === "true";
 
   return (
-    <div className="min-h-screen bg-gray-100 px-4 py-10 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-100 px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-6">
         <Menu />
-        <h1 className="text-3xl font-bold text-gray-800 text-center">Austin&apos;s {title} Project</h1>
+        <h1 className="text-3xl font-bold text-gray-800 text-center">Austin Villanueva&apos;s {title} Project</h1>
 
         <div className="w-full flex justify-center">
           {isPdf ? (
@@ -35,8 +35,10 @@ export default function ProjectDetails() {
           )}
         </div>
 
-        <div className="text-gray-700 text-base leading-relaxed">
-          <p>{detailedDescription}</p>
+        <div className="text-gray-700 text-base leading-relaxed space-y-4">
+          {detailedDescription.split('\n').map((paragraph, idx) => (
+            <p key={idx}>{paragraph}</p>
+          ))}
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

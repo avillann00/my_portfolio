@@ -9,7 +9,7 @@ export default function Resume() {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-10 flex flex-col items-center">
       <Menu />
-      <h1 className="text-4xl font-bold text-gray-800 mb-6">Austin&apos;s Resume</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-6">Austin Villanueva&apos;s Resume</h1>
 
       {/* Embedded Resume PDF */}
       <div className="w-full max-w-4xl rounded-lg overflow-hidden shadow-lg bg-white border mb-8">

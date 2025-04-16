@@ -1,30 +1,11 @@
 "use client";
 
-import projects from './components/projects.json';
-import ProjectCard from './components/ProjectCard';
 import Menu from './components/Menu';
 
 export default function Landing() {
 
-
-  interface Project {
-    id: string;
-    title: string;
-    previewImage: string;
-    detailedImage: string;
-    detailedDescription: string;
-    link: string;
-    isPdf: boolean;
-  }
-
-  const cards = projects.slice(0, 6).map((project: Project) => (
-    <div key={project.id} className="w-full sm:w-1/2 lg:w-1/3 p-4">
-      <ProjectCard {...project} />
-    </div>
-  ));
-
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800 px-4 sm:px-8 py-8">
+    <div className="min-h-screen bg-slate-100 text-gray-800 px-4 sm:px-8 py-8">
       {/* Header */}
       <header className="text-center mb-10 flex flex-col items-center">
         <Menu />
@@ -32,21 +13,22 @@ export default function Landing() {
       </header>
 
       {/* Intro */}
-      <section className="max-w-3xl mx-auto text-center mb-12">
+      <section className="max-w-3xl mx-auto text-center mb-12 bg-white p-8 rounded-lg shadow-md flex flex-col gap-4">
         <p className="text-lg leading-relaxed">
-          I&apos;m a second-year Computer Science major at the University of Central Florida.
-          I&apos;m passionate about full stack development and machine learning. I am currently
-          a Software Development Intern at Playtoon and a Stocker/Forklift Driver at Costco Wholesale.
+          Hello! My name is Austin Villanueva I&apos;m a second-year Computer Science major at the University of Central Florida.
+        </p>
+        <p className="text-lg leading-relaxed">
+          I am currently a Software Development Intern at Playtoon and a Stocker/Forklift Driver at Costco Wholesale.
+        </p>
+        <p className="text-lg leading-relaxed">
+          The purpose of this portfolio is to showcase my skills, experiences, and projects. 
+        </p>
+        <p className='text-lg leading-relaxed'>
+          To navigate my portfolio, select the menu button on the top left.
         </p>
       </section>
 
-      {/* Projects */}
-      <section className="mb-16">
-        <h3 className="text-2xl font-semibold text-center mb-8">Projects</h3>
-        <div className="flex flex-wrap justify-center">
-          {cards}
-        </div>
-      </section>
+      
 
       {/* Contact */}
       <section className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
