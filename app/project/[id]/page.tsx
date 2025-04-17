@@ -14,12 +14,18 @@ export default function ProjectDetails() {
   const isPdf = searchParams.get("isPdf") === "true";
 
   return (
-    <div className="min-h-screen bg-slate-100 px-4 py-10 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-blue-300 px-4 py-10 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6 space-y-6">
         <Menu />
         <h1 className="text-3xl font-bold text-gray-800 text-center">Austin Villanueva&apos;s {title} Project</h1>
 
-        <div className="w-full flex justify-center">
+        <div className="w-full flex flex-col justify-center gap-4"> 
+          <div className="text-gray-700 text-base leading-relaxed space-y-4">
+            {detailedDescription.split('\n').map((paragraph, idx) => (
+              <p key={idx}>{paragraph}</p>
+            ))}
+          </div>
+
           {isPdf ? (
             <iframe
               title={title}
@@ -33,12 +39,14 @@ export default function ProjectDetails() {
               className="w-full max-h-[500px] object-contain rounded-md border"
             />
           )}
-        </div>
 
-        <div className="text-gray-700 text-base leading-relaxed space-y-4">
-          {detailedDescription.split('\n').map((paragraph, idx) => (
-            <p key={idx}>{paragraph}</p>
-          ))}
+          {title === 'Job Materials' && 
+            <iframe 
+              title={title}
+              src="/resume.pdf"
+              className="w-full h-[500px] rounded-md border border-gray-200"
+            />
+          }
         </div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">

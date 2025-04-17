@@ -33,13 +33,16 @@ export default function Menu(){
           >
             About Me
           </button>
+          
+          {/*
           <button
             onClick={() => router.push('/resume')}
             className="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100"
           >
             Resume
           </button>
-          
+          */}
+
           <button
             onClick={() => router.push('/project')}
             className="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100"

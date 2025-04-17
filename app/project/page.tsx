@@ -15,14 +15,14 @@ export default function Projects(){
     isPdf: boolean;
   }
 
-  const cards = projects.slice(0, 6).map((project: Project) => (
+  const cards = projects.slice(3, 6).map((project: Project) => (
     <div key={project.id} className="w-full sm:w-1/2 lg:w-1/3 p-4">
       <ProjectCard {...project} />
     </div>
   ));
 
   return (
-    <div className="min-h-screen bg-slate-100 text-gray-800 px-4 sm:px-8 py-8">
+    <div className="min-h-screen bg-blue-300 text-gray-800 px-4 sm:px-8 py-8">
 
       <header className="text-center mb-10 flex flex-col items-center">
         <Menu />
@@ -31,7 +31,7 @@ export default function Projects(){
 
       {/* Projects */}
       <section className="mb-16">
-        <div className="flex flex-wrap justify-center">
+        <div className="flex flex-wrap justify-center items-center">
           {cards}
         </div>
       </section>

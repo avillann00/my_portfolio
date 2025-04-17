@@ -7,7 +7,7 @@ export default function About() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen px-6 py-10 bg-gray-100 flex flex-col items-center">
+    <div className="min-h-screen px-6 py-10 bg-blue-300 flex flex-col items-center">
       <Menu />
       <h1 className="text-4xl font-bold text-gray-800 mb-8">About Austin Villanueva</h1>
 

@@ -5,7 +5,7 @@ import Menu from './components/Menu';
 export default function Landing() {
 
   return (
-    <div className="min-h-screen bg-slate-100 text-gray-800 px-4 sm:px-8 py-8">
+    <div className="min-h-screen bg-blue-300 text-gray-800 px-4 sm:px-8 py-8">
       {/* Header */}
       <header className="text-center mb-10 flex flex-col items-center">
         <Menu />
@@ -13,7 +13,7 @@ export default function Landing() {
       </header>
 
       {/* Intro */}
-      <section className="max-w-3xl mx-auto text-center mb-12 bg-white p-8 rounded-lg shadow-md flex flex-col gap-4">
+      <section className="max-w-3xl mx-auto text-left mb-12 bg-white p-8 rounded-lg shadow-md flex flex-col gap-4">
         <p className="text-lg leading-relaxed">
           Hello! My name is Austin Villanueva I&apos;m a second-year Computer Science major at the University of Central Florida.
         </p>
@@ -27,8 +27,6 @@ export default function Landing() {
           To navigate my portfolio, select the menu button on the top left.
         </p>
       </section>
-
-      
 
       {/* Contact */}
       <section className="bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
