@@ -15,7 +15,7 @@ export default function Projects(){
     isPdf: boolean;
   }
 
-  const cards = projects.slice(3, 6).map((project: Project) => (
+  const cards = projects.slice(0, 3).concat(projects.slice(-3)).map((project: Project) => (
     <div key={project.id} className="w-full sm:w-1/2 lg:w-1/3 p-4">
       <ProjectCard {...project} />
     </div>
