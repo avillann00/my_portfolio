@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 interface Project {
   id: string;
@@ -27,27 +27,44 @@ export default function ProjectCard({
     <button
       onClick={() =>
         router.push(
-          `/project/${id}?title=${encodeURIComponent(title)}&detailedImage=${encodeURIComponent(
+          `/projects/${id}?title=${encodeURIComponent(
+            title
+          )}&detailedImage=${encodeURIComponent(
             detailedImage
           )}&detailedDescription=${encodeURIComponent(
             detailedDescription
           )}&link=${encodeURIComponent(link)}&isPdf=${String(isPdf)}`
         )
       }
-      className="w-full bg-white rounded-xl shadow-md overflow-hidden transition transform hover:scale-[1.02] hover:shadow-lg focus:outline-none"
+      className="
+        w-full
+        rounded-xl
+        border border-green-700/40
+        bg-gray-900/90
+        shadow-[0_0_15px_rgba(34,197,94,0.6)]
+        overflow-hidden
+        transition
+        transform
+        hover:scale-[1.03]
+        hover:shadow-[0_0_25px_rgba(34,197,94,1)]
+        focus:outline-none
+      "
     >
       <div className="flex flex-col">
         {previewImage && (
           <img
             src={previewImage}
             alt={`Preview of ${title}`}
-            className="h-48 w-full object-contain"
+            className="h-48 w-full object-contain bg-black/40"
           />
         )}
         <div className="p-4 text-left">
-          <h5 className="text-lg font-semibold text-gray-800">{title}</h5>
+          <h5 className="text-lg font-bold text-green-400 drop-shadow-[0_0_6px_rgba(34,197,94,0.9)]">
+            {title}
+          </h5>
         </div>
       </div>
     </button>
   );
 }
+

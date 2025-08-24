@@ -42,7 +42,7 @@ export default function Menu(){
           </button>
 
           <button
-            onClick={() => router.push('/project')}
+            onClick={() => router.push('/projects')}
             className="block w-full px-4 py-2 text-left text-gray-700 hover:bg-gray-100"
           >
             Projects

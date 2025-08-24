@@ -22,11 +22,12 @@ export default function Projects(){
   ));
 
   return (
-    <div className="min-h-screen bg-blue-300 text-gray-800 px-4 sm:px-8 py-8">
-
+    <div className="min-h-screen bg-[radial-gradient(circle_at_center,#1a1a1a_0%,#000_100%)] text-green-300 px-4 sm:px-8 py-8">
       <header className="text-center mb-10 flex flex-col items-center">
         <Menu />
-        <h1 className="text-4xl font-bold mb-4">Austin Villanueva&apos;s Projects</h1>
+        <h1 className="text-4xl font-bold mb-4 drop-shadow-[0_0_15px_rgba(0,255,100,0.8)]">
+          Austin Villanueva&apos;s Projects
+        </h1>
       </header>
 
       {/* Projects */}
@@ -38,3 +39,4 @@ export default function Projects(){
     </div>
   )
 }
+
